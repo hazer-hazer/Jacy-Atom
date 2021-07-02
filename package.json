@@ -5,9 +5,7 @@
   "description": "A short description of your package",
   "keywords": [
   ],
-  "activationCommands": {
-    "atom-workspace": "language-jacy:toggle"
-  },
+  "activationCommands": {},
   "activationHooks": ["language-jacy:grammar-used"],
   "repository": "https://github.com/hazer-hazer/Jacy-Atom",
   "license": "MIT",
@@ -15,6 +13,7 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "tree-sitter-jacy": "latest"
+    "tree-sitter-jacy": "latest",
+    "nan": "*"
   }
 }

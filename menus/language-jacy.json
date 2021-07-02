@@ -9,18 +9,7 @@
   },
   "menu": [
     {
-      "label": "Packages",
-      "submenu": [
-        {
-          "label": "language-jacy",
-          "submenu": [
-            {
-              "label": "Toggle",
-              "command": "language-jacy:toggle"
-            }
-          ]
-        }
-      ]
+      "label": "Jacy"
     }
   ]
 }
