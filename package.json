@@ -1,7 +1,7 @@
 {
   "name": "language-jacy",
   "main": "./lib/language-jacy",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A short description of your package",
   "keywords": [
   ],
@@ -9,7 +9,7 @@
     "atom-workspace": "language-jacy:toggle"
   },
   "activationHooks": ["language-jacy:grammar-used"],
-  "repository": "https://github.com/atom/language-jacy",
+  "repository": "https://github.com/hazer-hazer/Jacy-Atom",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
