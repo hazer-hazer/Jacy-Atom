@@ -4,16 +4,17 @@
   "version": "0.0.1",
   "description": "A short description of your package",
   "keywords": [
+    "jacy",
+    "atom",
+    "tree-sitter"
   ],
-  "activationCommands": {},
-  "activationHooks": ["language-jacy:grammar-used"],
   "repository": "https://github.com/hazer-hazer/Jacy-Atom",
   "license": "MIT",
   "engines": {
-    "atom": ">=1.0.0 <2.0.0"
+    "atom": "*",
+    "node": "*"
   },
   "dependencies": {
-    "tree-sitter-jacy": "latest",
-    "nan": "*"
+    "tree-sitter-jacy": "0.0.2-rc.5"
   }
 }

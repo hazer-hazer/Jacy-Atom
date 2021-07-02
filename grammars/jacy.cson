@@ -1,6 +1,8 @@
 name: 'Jacy'
-scopeName: 'jacy-lang'
+scopeName: 'source.jc'
 type: 'tree-sitter'
 parser: 'tree-sitter-jacy'
 
 fileTypes: ['jc']
+
+injectionRegex: '^jc$|^JC$|jc|Jacy|jacy'
