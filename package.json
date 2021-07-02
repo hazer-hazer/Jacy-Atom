@@ -1,0 +1,20 @@
+{
+  "name": "language-jacy",
+  "main": "./lib/language-jacy",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "language-jacy:toggle"
+  },
+  "activationHooks": ["language-jacy:grammar-used"],
+  "repository": "https://github.com/atom/language-jacy",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "tree-sitter-jacy": "0.0.1"
+  }
+}

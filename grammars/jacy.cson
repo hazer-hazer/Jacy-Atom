@@ -1,0 +1,6 @@
+name: 'Jacy'
+scopeName: 'jacy-lang'
+type: 'tree-sitter'
+parser: 'tree-sitter-jacy'
+
+fileTypes: ['jc']

@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle language-jacy",
+        "command": "language-jacy:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "language-jacy",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "language-jacy:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
