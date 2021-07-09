@@ -1,4 +1,3 @@
-func foo {
-    let a: i32 = 123;
-    
+func main {
+    let a: i32 = "werwrewr";
 }
