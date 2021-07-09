@@ -16,96 +16,86 @@ scopes:
         # {match: '^[A-Z\\d_]$', scopes: 'constant.other'}
     # ]
 
-    '"and"': 'keyword'
-    '"as"': 'keyword'
-    '"async"': 'keyword'
-    '"await"': 'keyword'
-    '"break"': 'keyword'
-    '"const"': 'keyword'
-    '"continue"': 'keyword'
-    '"do"': 'keyword'
-    '"elif"': 'keyword'
-    '"else"': 'keyword'
-    '"enum"': 'keyword'
-    '"false"': 'keyword'
-    '"for"': 'keyword'
-    '"func"': 'keyword'
-    '"if"': 'keyword'
-    '"impl"': 'keyword'
-    '"in"': 'keyword'
-    '"!in"': 'keyword'
-    '"infix"': 'keyword'
-    '"init"': 'keyword'
-    '"loop"': 'keyword'
-    '"match"': 'keyword'
-    '"mod"': 'keyword'
-    '"move"': 'keyword'
-    '"mut"': 'keyword'
-    '"return"': 'keyword'
-    '"or"': 'keyword'
-    '"party"': 'keyword'
-    '"pri"': 'keyword'
-    '"pub"': 'keyword'
-    '"ref"': 'keyword'
-    '"self"': 'keyword'
-    '"static"': 'keyword'
-    '"struct"': 'keyword'
-    '"super"': 'keyword'
-    '"this"': 'keyword'
-    '"trait"': 'keyword'
-    '"true"': 'keyword'
-    '"type"': 'keyword'
-    '"union"': 'keyword'
-    '"unsafe"': 'keyword'
-    '"use"': 'keyword'
-    '"let"': 'keyword'
-    '"where"': 'keyword'
-    '"while"': 'keyword'
-    '"yield"': 'keyword'
+    # Modifiers
 
-    '"="': 'operator'
-    '"+="': 'operator'
-    '"-="': 'operator'
-    '"*="': 'operator'
-    '"/="': 'operator'
-    '"%="': 'operator'
-    '"**="': 'operator'
-    '"<<="': 'operator'
-    '">>="': 'operator'
-    '"&="': 'operator'
-    '"|="': 'operator'
-    '"^="': 'operator'
-    '"??="': 'operator'
-    '"+"': 'operator'
-    '"-"': 'operator'
-    '"*"': 'operator'
-    '"/"': 'operator'
-    '"%"': 'operator'
-    '"**"': 'operator'
-    '"||"': 'operator'
-    '"&&"': 'operator'
-    '"??"': 'operator'
-    '"<<"': 'operator'
-    '">>"': 'operator'
-    '"&"': 'operator'
-    '"|"': 'operator'
-    '"^"': 'operator'
-    '"~"': 'operator'
-    '"!"': 'operator'
-    '"=="': 'operator'
-    '"!="': 'operator'
-    '"<"': 'operator'
-    '">"': 'operator'
-    '"<="': 'operator'
-    '">="': 'operator'
-    '"<=>"': 'operator'
-    '"==="': 'operator'
-    '"!=="': 'operator'
-    '".."': 'operator'
-    '"..="': 'operator'
-    '"."': 'operator'
-    '"::"': 'operator'
-    '"..."': 'operator'
-    '"|>"': 'operator'
-    '"$"': 'operator'
-    '"@"': 'operator'
+    # Keywords
+    '"if"': 'keyword.control.if'
+    '"elif"': 'keyword.control.elif'
+    '"else"': 'keyword.control.else'
+    '"in"': 'keyword.control.in'
+    '"for"': 'keyword.control.for'
+    '"loop"': 'keyword.control.loop'
+    '"while"': 'keyword.control.while'
+    '"match"': 'keyword.control.match'
+    '"return"': 'keyword.control.return'
+    '"break"': 'keyword.control.break'
+    '"continue"': 'keyword.control.continue'
+    '"ref"': 'keyword.control.ref'
+    '"let"': 'keyword.control.let'
+
+    '"let"': 'storage.keyword.let'
+    '"const"': 'storage.keyword.const'
+    '"type"': 'storage.keyword.type'
+    '"func"': 'storage.keyword.func'
+    '"enum"': 'storage.keyword.enum'
+    '"mod"': 'storage.keyword.mod'
+    '"trait"': 'storage.keyword.trait'
+    '"impl"': 'storage.keyword.impl'
+    '"struct"': 'storage.keyword.struct'
+    '"pub"': 'storage.keyword.pub'
+
+    '"as"': 'keyword.operator.as'
+    '":"': 'keyword.operator.constraint'
+    '"::"': 'keyword.operator.path'
+    '"="': 'keyword.operator.assign'
+
+    # punctuations
+    '";"': 'punctuation.terminator.statement'
+    '"["': 'punctuation.definition.begin.bracket.square'
+    '"]"': 'punctuation.definition.end.bracket.square'
+    '","': 'punctuation.separator.delimiter'
+    '"{"': 'punctuation.section.block.begin.bracket.curly'
+    '"}"': 'punctuation.section.block.end.bracket.curly'
+    '"("': 'punctuation.section.parens.begin.bracket.round'
+    '")"': 'punctuation.section.parens.end.bracket.round'
+
+    # Literals
+    'unit_expr': 'constant.language.unit'
+    'char_lit': 'string.quoted.single'
+    'string_lit': 'string.quoted.double'
+    'bool_lit': 'constant.language.boolean'
+    'int_lit': 'constant.numeric.decimal'
+    'float_lit': 'constant.numeric.decimal'
+    'negative_literal > "-"' : 'constant.numeric.neg'
+
+    # Operators
+    '"and"': 'keyword.control.and'
+    '"or"': 'keyword.control.or'
+
+    '''
+    self_parameter > "&",
+    ref_pat > "&",
+    ref_expr > "&",
+    ref_type > "&"
+    ''' : 'keyword.operator.reference'
+
+    '''
+    binop_expr > "+",
+    binop_expr > "-",
+    binop_expr > "/",
+    binop_expr > "*",
+    binop_expr > "%",
+    binop_expr > "**",
+    binop_expr > "<<",
+    binop_expr > ">>",
+    ''' : 'keyword.operator.math'
+
+    '''
+    assign_expr > "+=",
+    assign_expr > "-=",
+    assign_expr > "/=",
+    assign_expr > "*=",
+    assign_expr > "%=",
+    assign_expr > "<<=",
+    assign_expr > ">>=",
+    ''' : 'keyword.operator.math.assign'

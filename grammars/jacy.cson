@@ -2,174 +2,106 @@
 'fileTypes': ['jc']
 'name': 'Jacy'
 
-'patterns': [
-  {
-    'match': '\\b(and|as|async|await|break|const|continue|do|elif|else|enum|false|for|func|if|impl|in|\\!in|infix|init|loop|match|mod|move|mut|return|or|party|pri|pub|ref|self|static|struct|super|this|trait|true|type|union|unsafe|use|let|where|while|yield)\\b'
-    'name': 'keyword'
-  },
+patterns: [
+    {
+        comment: 'Control-flow keyword'
+        name: 'keyword.control.jacy'
+        match: '\\b(if|elif|else|in|!in|for|loop|while|match|return|break|continue|and|or)\\b'
+    }
 
-  'operators': {
-    'patterns': [
-      {
-          'match': '='
-          'name': 'operator.assign'
-      }
-      {
-          'match': '+='
-          'name': 'operator.add_assign'
-      }
-      {
-          'match': '-='
-          'name': 'operator.sub_assign'
-      }
-      {
-          'match': '*='
-          'name': 'operator.mul_assign'
-      }
-      {
-          'match': '/='
-          'name': 'operator.div_assign'
-      }
-      {
-          'match': '%='
-          'name': 'operator.rem_assign'
-      }
-      {
-          'match': '**='
-          'name': 'operator.pow_assign'
-      }
-      {
-          'match': '<<='
-          'name': 'operator.shl_assign'
-      }
-      {
-          'match': '>>='
-          'name': 'operator.shr_assign'
-      }
-      {
-          'match': '&='
-          'name': 'operator.bitand_assign'
-      }
-      {
-          'match': '|='
-          'name': 'operator.bitor_assign'
-      }
-      {
-          'match': '^='
-          'name': 'operator.xor_assign'
-      }
-      {
-          'match': '+'
-          'name': 'operator.add'
-      }
-      {
-          'match': '-'
-          'name': 'operator.sub'
-      }
-      {
-          'match': '*'
-          'name': 'operator.mul'
-      }
-      {
-          'match': '/'
-          'name': 'operator.div'
-      }
-      {
-          'match': '%'
-          'name': 'operator.rem'
-      }
-      {
-          'match': '**'
-          'name': 'operator.pow'
-      }
-      {
-          'match': '<<'
-          'name': 'operator.shl'
-      }
-      {
-          'match': '>>'
-          'name': 'operator.shr'
-      }
-      {
-          'match': '&'
-          'name': 'operator.bitand'
-      }
-      {
-          'match': '|'
-          'name': 'operator.bitor'
-      }
-      {
-          'match': '^'
-          'name': 'operator.xor'
-      }
-      {
-          'match': '~'
-          'name': 'operator.tilde'
-      }
-      {
-          'match': '!'
-          'name': 'operator.not'
-      }
-      {
-          'match': '=='
-          'name': 'operator.eq'
-      }
-      {
-          'match': '!='
-          'name': 'operator.not_eq'
-      }
-      {
-          'match': '<'
-          'name': 'operator.lt'
-      }
-      {
-          'match': '>'
-          'name': 'operator.gt'
-      }
-      {
-          'match': '<='
-          'name': 'operator.lt_eq'
-      }
-      {
-          'match': '>='
-          'name': 'operator.gt_eq'
-      }
-      {
-          'match': '<=>'
-          'name': 'operator.shaceship'
-      }
-      {
-          'match': '..'
-          'name': 'operator.range'
-      }
-      {
-          'match': '..='
-          'name': 'operator.range_incl'
-      }
-      {
-          'match': '.'
-          'name': 'operator.member_access'
-      }
-      {
-          'match': '::'
-          'name': 'operator.path'
-      }
-      {
-          'match': '...'
-          'name': 'operator.spread'
-      }
-      {
-          'match': '|>'
-          'name': 'operator.pipe'
-      }
-      {
-          'match': '$'
-          'name': 'operator.dollar'
-      }
-      {
-          'match': '@'
-          'name': 'operator.at'
-      }
-    ]
-  }
+    {
+        comment: 'Keyword'
+        name: 'keyword.other.jacy'
+        match: '\\b(mod|let|ref|use|super|as|move|party)\\b'
+    }
+
+    {
+        comment: 'Self'
+        name: 'keyword.other.self.jacy'
+        match: '\\bself\\b'
+    }
+
+    {
+        comment: 'Function definition'
+        begin: '\\b(func)\\b'
+        end: '(?=[\\{;])'
+        beginCaptures: {
+            '1': {name: 'keyword.other.func.jacy'}
+        }
+        patterns: [
+            {
+                begin: '([\\p{Alpha}_][\\w]*)'
+                end: '(?=[\\{;}])'
+                beginCaptures: {
+                    '1': {name: 'entity.name.function.jacy'}
+                }
+                patterns: [
+                    {
+                        comment: 'Function parameters'
+                        match: 'func'
+                        name: 'keyword.other.func.jacy'
+                    }
+                ]
+            }
+        ]
+    }
+
+    {
+        comment: 'Call expression'
+        match: '\\b([\\p{Alpha}_][\\w]*)\\s*(?=\\()'
+        captures: {
+            '1': {name: 'entity.name.function.jacy'}
+        }
+    }
+
+    {include: '#operators'}
+    {include: '#modifiers'}
+    {include: '#types'}
 ]
+
+'repository': {
+    'operators': {
+        patterns: [
+            {
+                comment: 'Assignment operator'
+                name: 'keyword.operator.assignment.jacy'
+                match: '\\+=|-=|/=|\\*=|%=|\\^=|&=|\\|=|<<=|>>=|='
+            }
+        ]
+    }
+
+    'modifiers': {
+        patterns: [
+            {
+                comment: 'Mut modifier'
+                name: 'storage.modifier.mut.jacy'
+                match: '\\bmut\\b'
+            }
+            {
+                comment: 'Pub modifier'
+                name: 'storage.modifier.pub.jacy'
+                match: '\\bpub\\b'
+            }
+            {
+                comment: 'Const modifier'
+                name: 'storage.modifier.const.jacy'
+                match: '\\bconst\\b'
+            }
+            {
+                comment: 'Static modifier'
+                name: 'storage.modifier.static.jacy'
+                match: '\\bstatic\\b'
+            }
+        ]
+    }
+
+    'types': {
+        patterns: [
+            {
+                comment: 'Built-in types'
+                name: 'storage.type.core.jacy'
+                match: '\\b(bool|char|[ui](?:8|16|32|64|128)|f(?:16|32|64|128)|usize|isize|str|String|Self|Option|Result)\\b'
+            }
+        ]
+    }
+}
