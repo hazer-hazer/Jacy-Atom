@@ -15,6 +15,11 @@
     "node": "*"
   },
   "dependencies": {
-    "tree-sitter-jacy": "0.0.2-rc.6"
+    "tree-sitter-jacy": "0.0.2-rc.12"
+  },
+  "devDependencies": {
+    "electron": "^13.1.6",
+    "electron-prebuilt": "^1.4.13",
+    "electron-rebuild": "^2.3.5"
   }
 }

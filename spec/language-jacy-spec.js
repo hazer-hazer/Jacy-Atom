@@ -1,6 +1,6 @@
 'use babel';
 
-import LanguageJacy from '../lib/language-jacy';
+import LanguageJacy from '../lib/main';
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //
