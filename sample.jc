@@ -1,3 +1,4 @@
 func foo {
-    let a = "";
+    let a: i32 = 123;
+    
 }
