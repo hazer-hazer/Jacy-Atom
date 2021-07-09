@@ -1,10 +1,10 @@
-scopeName: 'source.jc'
-fileTypes: ['jc']
-name: 'Jacy'
+'scopeName': 'source.jc'
+'fileTypes': ['jc']
+'name': 'Jacy'
 
-patterns: [
+'patterns': [
   {
-    match: '\\b(and|as|async|await|break|const|continue|do|elif|else|enum|false|for|func|if|impl|in|!in|infix|init|loop|match|mod|move|mut|return|or|party|pri|pub|ref|self|static|struct|super|this|trait|true|type|union|unsafe|use|let|where|while|yield)'
-    name: 'keyword'
+    'match': '\\b(and|as|async|await|break|const|continue|do|elif|else|enum|false|for|func|if|impl|in|\\!in|infix|init|loop|match|mod|move|mut|return|or|party|pri|pub|ref|self|static|struct|super|this|trait|true|type|union|unsafe|use|let|where|while|yield)\\b'
+    'name': 'keyword'
   }
 ]
