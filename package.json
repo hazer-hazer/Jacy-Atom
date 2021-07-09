@@ -1,6 +1,6 @@
 {
   "name": "language-jacy",
-  "main": "./lib/language-jacy",
+  "main": "lib/language-jacy",
   "version": "0.0.1",
   "description": "A short description of your package",
   "keywords": [
@@ -15,6 +15,6 @@
     "node": "*"
   },
   "dependencies": {
-    "tree-sitter-jacy": "0.0.2-rc.5"
+    "tree-sitter-jacy": "0.0.2-rc.6"
   }
 }
