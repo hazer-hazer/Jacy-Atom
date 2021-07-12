@@ -43,6 +43,25 @@ patterns: [
 ]
 
 'repository': {
+    'comments': {
+        patterns: [
+            {include: '#line_comment'}
+            {include: '#block_comment'}
+        ]
+    }
+
+    'line_comment': {
+        name: 'comment.line.jacy'
+        begin: '//'
+        end: '$'
+    }
+
+    'block_comment': {
+        name: 'comment.block.jacy'
+        begin: '//[!/](?=[^/])'
+        end: '$'
+    }
+
     'keywords': {
         patterns: [
             {
@@ -327,6 +346,7 @@ patterns: [
                     {include: '#sigils'}
                     {include: '#modifiers'}
                     {include: '#types'}
+                    {include: '#misc_operators'}
                 ]
             }
         ]
