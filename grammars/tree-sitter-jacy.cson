@@ -123,11 +123,11 @@ scopes:
     '''
     assign_expr > "+=",
     assign_expr > "-=",
-    compound_assignment_expr > "/=",
-    compound_assignment_expr > "*=",
-    compound_assignment_expr > "%=",
-    compound_assignment_expr > "<<=",
-    compound_assignment_expr > ">>=",
+    assign_expr > "/=",
+    assign_expr > "*=",
+    assign_expr > "%=",
+    assign_expr > "<<=",
+    assign_expr > ">>=",
     ''' : 'keyword.operator.math.assign'
 
     '''
@@ -140,16 +140,6 @@ scopes:
     infix_expr > "<<",
     infix_expr > ">>",
     ''' : 'keyword.operator.math'
-
-    '''
-    assign_expr > "+=",
-    assign_expr > "-=",
-    assign_expr > "/=",
-    assign_expr > "*=",
-    assign_expr > "%=",
-    assign_expr > "<<=",
-    assign_expr > ">>=",
-    ''' : 'keyword.operator.math.assign'
 
     '''
     infix_expr > "&",

@@ -2,7 +2,7 @@
     'Enum definition': {
         prefix: 'enum'
         body: '''
-            enum ${1:TypeName} {
+            enum ${1:Name} {
                 $2
             }
         '''
