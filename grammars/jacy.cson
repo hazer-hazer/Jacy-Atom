@@ -14,6 +14,7 @@ patterns: [
     {include: '#comments'}
     {include: '#operators'}
     {include: '#keywords'}
+    {include: '#spec_idents'}
     {include: '#punctuation'}
     {include: '#sigils'}
     {include: '#modifiers'}
@@ -126,6 +127,29 @@ patterns: [
                 name: 'punctuation.parenthesis.jacy'
                 match: '[\\(\\)]'
             }
+        ]
+    }
+
+    'self': {
+        comment: 'Self instance variable'
+        name: 'keyword.other.self.jacy'
+        match: '\\bself\\b'
+    }
+
+    'prelude_variants': {
+        patterns: [
+            {
+                comment: 'Enum'
+                name: 'support.constant.core.jacy'
+                math: '\\b(Some|None|Ok|Err)\\b'
+            }
+        ]
+    }
+
+    'spec_idents': {
+        patterns: [
+            {include: '#prelude_variants'}
+            {include: '#self'}
         ]
     }
 
@@ -299,6 +323,7 @@ patterns: [
                     {include: '#comments'}
                     {include: '#sigils'}
                     {include: '#modifiers'}
+                    {include: '#spec_idents'}
                     {include: '#types'}
                     {include: '#misc_operators'}
                     {
