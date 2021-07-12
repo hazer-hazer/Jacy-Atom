@@ -116,11 +116,13 @@ patterns: [
                     '0': {
                         name: 'punctuation.definition.string.begin.jacy'
                     }
-                    '1': {
-                        name: 'meta.encoding.cpp'
-                    }
                 }
                 end: '"'
+            }
+            {
+                comment: 'Char literal'
+                name: 'string.quoted.single.jacy'
+                match: '\'.\''
             }
         ]
     }
