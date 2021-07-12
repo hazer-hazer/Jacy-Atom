@@ -110,6 +110,7 @@ patterns: [
         patterns: [
             {include: '#bool_lit'}
             {include: '#int_lit'}
+            {include: '#float_lit'}
             {include: '#char_lit'}
             {include: '#string_lit'}
         ]
