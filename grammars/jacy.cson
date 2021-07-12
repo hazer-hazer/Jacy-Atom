@@ -108,9 +108,15 @@ patterns: [
 
     'literals': {
         patterns: [
+            {include: '#bool_lit'}
             {include: '#char_lit'}
             {include: '#string_lit'}
         ]
+    }
+
+    'bool_lit': {
+        name: 'constant.language.boolean.jacy'
+        match: '\\b(true|false)\\b'
     }
 
     'string_lit': {
