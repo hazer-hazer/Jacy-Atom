@@ -106,7 +106,14 @@ patterns: [
         ]
     }
 
-    'strings': {
+    'literals': {
+        patterns: [
+            {include: '#char_lit'}
+            {include: '#string_lit'}
+        ]
+    }
+
+    'string_lit': {
         patterns: [
             {
                 comment: 'String literal'
@@ -119,11 +126,16 @@ patterns: [
                 }
                 end: '"'
             }
-            {
-                comment: 'Char literal'
-                name: 'string.quoted.single.jacy'
-                match: '\'.\''
-            }
         ]
+    }
+
+    'char_lit': {
+        name: 'string.quoted.single.jacy'
+        match: '(b?\')(?:[^\'\\\\]|\\\\(?:x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.))([^\']*)(\')'
+        captures: {
+          '1': { name: '' }
+          '2': { name: 'invalid.illegal.rust' }
+          '3': { name: '' }
+        }
     }
 }
