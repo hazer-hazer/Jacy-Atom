@@ -57,7 +57,7 @@ patterns: [
     {include: '#operators'}
     {include: '#modifiers'}
     {include: '#types'}
-    {include: '#strings'}
+    {include: '#literals'}
 ]
 
 'repository': {
