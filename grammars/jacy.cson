@@ -323,6 +323,7 @@ patterns: [
                     {include: '#operators'}
                     {include: '#punctuation'}
                     {include: '#types'}
+                    {include: '#sigils'}
                 ]
             }
         ]
