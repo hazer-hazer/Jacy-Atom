@@ -25,6 +25,7 @@ patterns: [
     {include: '#func'}
     {include: '#type_items'}
     {include: '#type_alias'}
+    {include: '#impl'}
     {include: '#expressions'}
 ]
 
