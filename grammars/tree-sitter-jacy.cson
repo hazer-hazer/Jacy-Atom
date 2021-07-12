@@ -33,16 +33,16 @@ scopes:
     '"ref"': 'keyword.control.ref'
     '"let"': 'keyword.control.let'
 
-    '"let"': 'storage.keyword.let'
-    '"const"': 'storage.keyword.const'
-    '"type"': 'storage.keyword.type'
-    '"func"': 'storage.keyword.func'
-    '"enum"': 'storage.keyword.enum'
-    '"mod"': 'storage.keyword.mod'
-    '"trait"': 'storage.keyword.trait'
-    '"impl"': 'storage.keyword.impl'
-    '"struct"': 'storage.keyword.struct'
-    '"pub"': 'storage.keyword.pub'
+    '"let"': 'storage.modifier.let'
+    '"const"': 'storage.modifier.const'
+    '"type"': 'storage.modifier.type'
+    '"func"': 'storage.modifier.func'
+    '"enum"': 'storage.modifier.enum'
+    '"mod"': 'storage.modifier.mod'
+    '"trait"': 'storage.modifier.trait'
+    '"impl"': 'storage.modifier.impl'
+    '"struct"': 'storage.modifier.struct'
+    '"pub"': 'storage.modifier.pub'
 
     '"as"': 'keyword.operator.as'
     '":"': 'keyword.operator.constraint'
@@ -80,7 +80,6 @@ scopes:
     ref_expr > "&",
     ref_type > "&"
     ''' : 'keyword.operator.reference'
-
 
     '''
     assign_expr > "+=",
