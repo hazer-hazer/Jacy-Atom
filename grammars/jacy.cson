@@ -30,6 +30,7 @@ patterns: [
     }
 
     {include: '#operators'}
+    {include: '#punctuation'}
     {include: '#modifiers'}
     {include: '#types'}
     {include: '#literals'}
@@ -72,6 +73,26 @@ patterns: [
                 comment: 'Try operators (`expr?` and `expr!`)'
                 name: 'keyword.operator.misc.try.jacy'
                 match: '\\?|!'
+            }
+        ]
+    }
+
+    'punctuation': {
+        patterns: [
+            {
+                comment: '{}'
+                name: 'punctuation.brace.jacy'
+                match: '[\\{\\}]'
+            }
+            {
+                comment: '[]'
+                name: 'punctuation.bracket.jacy'
+                match: '[\\[\\]]'
+            }
+            {
+                comment: '()'
+                name: 'punctuation.parenthesis.jacy'
+                match: '[\\(\\)]'
             }
         ]
     }
