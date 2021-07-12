@@ -68,7 +68,7 @@ scopes:
     'bool_lit': 'constant.language.boolean'
     'int_lit': 'constant.numeric.decimal'
     'float_lit': 'constant.numeric.decimal'
-    'neg_lit > "-"' : 'constant.numeric.neg'
+    'lit_pat > "-"' : 'constant.numeric.neg'
 
     # Operators
     '"and"': 'keyword.control.and'
