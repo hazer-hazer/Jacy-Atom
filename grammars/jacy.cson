@@ -71,6 +71,7 @@ patterns: [
 
     'operators': {
         patterns: [
+            {include: '#misc_operators'}
             {
                 comment: 'Assignment operator'
                 name: 'keyword.operator.assignment.jacy'
