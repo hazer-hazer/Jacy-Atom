@@ -46,6 +46,33 @@ patterns: [
                 name: 'keyword.operator.assignment.jacy'
                 match: '\\+=|-=|/=|\\*=|%=|\\^=|&=|\\|=|<<=|>>=|='
             }
+            {
+                comment: 'Boolean operators'
+                name: 'keyword.operator.logic.boolean.jacy'
+                match: '\\b(or|and)\\b'
+            }
+            {
+                comment: 'Comparison operators'
+                name: 'keyword.operator.comparison.jacy'
+                match: '<=|>=|<|>|==|!='
+            }
+            {
+                comment: 'Arithmetic operators'
+                name: 'keyword.operator.arithmetic.jacy'
+                # Note: disallow `+` and `-` followed by `+` and `-` respectively
+                # They are matched as invalid below
+                match: '!|\\+(?!\\+)|-(?!-)|/|\\*|%|\\^|&|\\||<<|>>'
+            }
+            {
+                comment: 'Mistaken operators'
+                name: 'invalid.illegal.jacy'
+                match: '\\+\\+|--'
+            }
+            {
+                comment: 'Try operators (`expr?` and `expr!`)'
+                name: 'keyword.operator.misc.try.jacy'
+                match: '\\?|!'
+            }
         ]
     }
 
