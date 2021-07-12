@@ -165,6 +165,26 @@ patterns: [
         ]
     }
 
+    'float_lit': {
+        patterns: [
+            {
+                comment: 'Float literal'
+                name: 'constant.numeric.float.jacy'
+                match: '\\b([0-9][0-9_]*\\.[0-9][0-9_]*)\\b'
+            }
+            {
+                comment: 'Float literal with type'
+                name: 'constant.numeric.float.jacy'
+                match: '\\b([0-9][0-9_]*(?:\\.[0-9][0-9_]*)?)(f32|f64|f|d)\\b'
+            }
+            {
+                comment: 'Float literal with exp'
+                name: 'constant.numeric.float.jacy'
+                match: '\\b([0-9][0-9_]*(?:\\.[0-9][0-9_]*)?[eE][+-]?[0-9_]+)(f32|f64|f|d)?\\b'
+            }
+        ]
+    }
+
     'string_lit': {
         patterns: [
             {
