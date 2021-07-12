@@ -15,7 +15,7 @@
     "node": "*"
   },
   "dependencies": {
-    "tree-sitter-jacy": "0.0.2-rc.12"
+    "tree-sitter-jacy": "0.0.4-rc.0"
   },
   "devDependencies": {
     "electron": "^13.1.6",
