@@ -10,6 +10,28 @@ injectionRegex: '^jc$|^JC$|jc|Jacy|jacy'
 comments:
     start: '// '
 
+folds: [
+    {
+        type: 'block_comment'
+    }
+    {
+        start: {index: 0, type: '{'}
+        end: {index: -1, type: '}'}
+    }
+    {
+        start: {index: 0, type: '['}
+        end: {index: -1, type: ']'}
+    }
+    {
+        start: {index: 0, type: '('}
+        end: {index: -1, type: ')'}
+    }
+    {
+        start: {index: 0, type: '<'}
+        end: {index: -1, type: '>'}
+    }
+]
+
 scopes:
     'source_file': 'source.jc'
 
