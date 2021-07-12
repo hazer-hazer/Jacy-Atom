@@ -1,3 +1,2 @@
-func main {
-    type a = i32;
+func main() {
 }
