@@ -194,6 +194,26 @@ patterns: [
         ]
     }
 
+    'generic_params': {
+        comment: 'Generic parameters/Arguments'
+        name: 'meta.generic_params.jacy'
+        begin: '<(?![=<])'
+        end: '>'
+        patterns: [
+            {include: '#comments'}
+            {
+                match: '\\b\\s*(=)\\s*\\b'
+                captures: {
+                    '1': {name: 'keyword.operator.generic_params.jacy'}
+                }
+            }
+            {include: '#sigils'}
+            {include: '#modifiers'}
+            {include: '#types'}
+            {include: '#generic_params'}
+        ]
+    }
+
     'literals': {
         patterns: [
             {include: '#bool_lit'}
@@ -326,6 +346,7 @@ patterns: [
                     {include: '#spec_idents'}
                     {include: '#types'}
                     {include: '#misc_operators'}
+                    {include: '#generic_params'}
                     {
                         comment: 'Function parameters'
                         match: 'func'
@@ -355,6 +376,7 @@ patterns: [
                     {include: '#sigils'}
                     {include: '#modifiers'}
                     {include: '#types'}
+                    {include: '#generic_params'}
                     {include: '#misc_operators'}
                 ]
             }
@@ -384,6 +406,7 @@ patterns: [
                     {include: '#punctuation'}
                     {include: '#types'}
                     {include: '#sigils'}
+                    {include: '#generic_params'}
                 ]
             }
         ]
