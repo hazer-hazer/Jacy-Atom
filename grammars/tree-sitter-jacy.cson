@@ -12,9 +12,23 @@ comments:
 
 scopes:
     'source_file': 'source.jc'
-    # 'ideantifier': [
-        # {match: '^[A-Z\\d_]$', scopes: 'constant.other'}
-    # ]
+
+    'const_param > ident': 'constant.other'
+
+    'type_ident': [
+        # Specific rule for generic-like types
+        {match: '^[A-Z\\d_]{2,}$', scopes: 'constant-other'},
+        'support.type.other'
+    ]
+
+    'prim_type': 'support.type.primitive'
+    'never_type': 'support.type.never'
+    'unit_type': 'support.type.unit'
+
+    'ident': [
+        # Specific rule for constant-like types
+        {match: '^[A-Z\\d_]{2,}$', scopes: 'constant.other'}
+    ]
 
     # Modifiers
 

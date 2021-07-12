@@ -42,6 +42,16 @@ patterns: [
 ]
 
 'repository': {
+    'keywords': {
+        patterns: [
+            {
+                comment: 'Keyword'
+                name: 'keyword.other.jacy'
+                match: '\\b(party|mod|let|ref|use|super|as|move)\\b'
+            }
+        ]
+    }
+
     'operators': {
         patterns: [
             {
