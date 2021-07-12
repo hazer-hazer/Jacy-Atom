@@ -38,6 +38,7 @@ patterns: [
     {include: '#func'}
     {include: '#type_items'}
     {include: '#type_alias'}
+    {include: '#expressions'}
 ]
 
 'repository': {
@@ -327,5 +328,20 @@ patterns: [
                 ]
             }
         ]
+    }
+
+    # Expressions
+    'expressions': {
+        patterns: [
+            {include: 'func_call'}
+        ]
+    }
+
+    'func_call': {
+        comment: 'Function call'
+        match: '\\b([\\p{Alpha}_][\\w]*)\\s*(?=\\()'
+        captures: {
+            '1': { name: 'entity.name.function.jacy' }
+        }
     }
 }
