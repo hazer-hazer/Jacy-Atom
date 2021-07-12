@@ -358,7 +358,7 @@ patterns: [
     'func': {
         comment: 'Function definition'
         begin: '\\b(func)\\b'
-        end: '(?=[\\{;])'
+        end: '(?=[\\{;=])'
         beginCaptures: {
             '1': {name: 'keyword.other.func.jacy'}
         }
