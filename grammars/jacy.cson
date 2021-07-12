@@ -31,6 +31,7 @@ patterns: [
 
     {include: '#operators'}
     {include: '#punctuation'}
+    {include: '#sigils'}
     {include: '#modifiers'}
     {include: '#types'}
     {include: '#literals'}
@@ -95,6 +96,12 @@ patterns: [
                 match: '[\\(\\)]'
             }
         ]
+    }
+
+    'sigils': {
+        comment: 'Sigils'
+        name: 'keyword.operator.sigil.jacy'
+        match: '[&*](?=[\\w\\(\\[\\|\\"]+)'
     }
 
     'modifiers': {
@@ -258,6 +265,9 @@ patterns: [
                     '1': {name: 'entity.name.function.jacy'}
                 }
                 patterns: [
+                    {include: '#sigils'}
+                    {include: '#modifiers'}
+                    {include: '#types'}
                     {
                         comment: 'Function parameters'
                         match: 'func'
