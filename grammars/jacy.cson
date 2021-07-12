@@ -4,24 +4,6 @@ name: 'Jacy'
 
 patterns: [
     {
-        comment: 'Control-flow keyword'
-        name: 'keyword.control.jacy'
-        match: '\\b(if|elif|else|in|!in|for|loop|while|match|return|break|continue|and|or)\\b'
-    }
-
-    {
-        comment: 'Keyword'
-        name: 'keyword.other.jacy'
-        match: '\\b(mod|let|ref|use|super|as|move|party)\\b'
-    }
-
-    {
-        comment: 'Self'
-        name: 'keyword.other.self.jacy'
-        match: '\\bself\\b'
-    }
-
-    {
         comment: 'Call expression'
         match: '\\b([\\p{Alpha}_][\\w]*)\\s*(?=\\()'
         captures: {
