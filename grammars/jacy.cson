@@ -1,6 +1,6 @@
 'scopeName': 'source.jc'
 'fileTypes': ['jc']
-'name': 'Jacy'
+name: 'Jacy'
 
 patterns: [
     {
@@ -57,6 +57,7 @@ patterns: [
     {include: '#operators'}
     {include: '#modifiers'}
     {include: '#types'}
+    {include: '#strings'}
 ]
 
 'repository': {
@@ -101,6 +102,25 @@ patterns: [
                 comment: 'Built-in types'
                 name: 'storage.type.core.jacy'
                 match: '\\b(bool|char|[ui](?:8|16|32|64|128)|f(?:16|32|64|128)|usize|isize|str|String|Self|Option|Result)\\b'
+            }
+        ]
+    }
+
+    'strings': {
+        patterns: [
+            {
+                comment: 'String literal'
+                name: 'string.quoted.double.jacy'
+                begin: '"'
+                beginCaptures: {
+                    '0': {
+                        name: 'punctuation.definition.string.begin.jacy'
+                    }
+                    '1': {
+                        name: 'meta.encoding.cpp'
+                    }
+                }
+                end: '"'
             }
         ]
     }
