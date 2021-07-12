@@ -212,6 +212,7 @@ patterns: [
             {include: '#modifiers'}
             {include: '#types'}
             {include: '#generic_params'}
+            {include: '#lifetime'}
         ]
     }
 
