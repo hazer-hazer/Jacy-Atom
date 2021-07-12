@@ -45,9 +45,19 @@ patterns: [
     'keywords': {
         patterns: [
             {
+                comment: 'Control-flow keywords'
+                name: 'keyword.control.jacy'
+                match: '\\b(break|continue|else|if|in|for|loop|match|return|while)\\b'
+            }
+            {
                 comment: 'Keyword'
                 name: 'keyword.other.jacy'
                 match: '\\b(party|mod|let|ref|use|super|as|move)\\b'
+            }
+            {
+                comment: 'Reserved keywords'
+                name: 'invalid.illegal.jacy'
+                match: '\\b(try|catch|final|pure|async|await|do|infix)\\b'
             }
         ]
     }
