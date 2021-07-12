@@ -62,8 +62,11 @@ scopes:
     '":"': 'keyword.operator.constraint'
     '"::"': 'keyword.operator.path'
     '"="': 'keyword.operator.assign'
+    'bind_pat > "@"': 'keyword.operator.bind_pat'
     'prefix_expr > "*"': 'keyword.operator.dereference'
     'prefix_expr > "!"': 'keyword.operator.not'
+    'try_expr > "?"': 'keyword.operator.try'
+    'try_expr > "!"': 'keyword.operator.unwrap'
 
     # punctuations
     '";"': 'punctuation.terminator.statement'
@@ -145,3 +148,22 @@ scopes:
     infix_expr > "and",
     infix_expr > "or",
     ''' : 'keyword.operator.logic.boolean'
+
+    '''
+    range_expr > "..",
+    range_expr > "..=",
+    ''' : 'keyword.operator.range'
+
+    'match_arm > "=>"': 'keyword.operator.match_arm'
+
+    # Other
+    '''
+    "->",
+    "<-",
+    "<=",
+    ''' : 'keyword.operator.misc'
+
+    '''
+    "-", "/", "%", "<<", ">>", "and", "or", "<", ">", "=>", "<-",
+    "==", "<=", ">=", "!=", "&", "|", "^", "..", "..=", "...", "->"
+    ''' : 'misc.other'
