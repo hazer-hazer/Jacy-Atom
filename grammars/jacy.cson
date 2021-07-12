@@ -63,6 +63,12 @@ patterns: [
         ]
     }
 
+    'misc_operators': {
+        comment: 'Misc operators'
+        name: 'keyword.operator.misc.jacy'
+        match: '->|=>|::|:'
+    }
+
     'operators': {
         patterns: [
             {
