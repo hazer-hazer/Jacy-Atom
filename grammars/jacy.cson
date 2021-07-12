@@ -19,6 +19,7 @@ patterns: [
     {include: '#sigils'}
     {include: '#modifiers'}
     {include: '#lifetime'}
+    {include: '#ref_lifetime'}
     {include: '#types'}
     {include: '#literals'}
     {include: '#func'}
@@ -377,6 +378,7 @@ patterns: [
                     {include: '#misc_operators'}
                     {include: '#generic_params'}
                     {include: '#lifetime'}
+                    {include: '#ref_lifetime'}
                     {
                         comment: 'Function parameters'
                         match: 'func'
