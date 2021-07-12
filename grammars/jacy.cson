@@ -214,6 +214,17 @@ patterns: [
         ]
     }
 
+    'lifetime': {
+        comment: 'Lifetime'
+        name: 'storage.modifier.lifetime.jacy'
+        match: '\'([\\p{Alpha}_][\\w]*)\\b'
+        captures: {
+            '1': {
+                name: 'entity.name.lifetime.jacy'
+            }
+        }
+    }
+
     'literals': {
         patterns: [
             {include: '#bool_lit'}
