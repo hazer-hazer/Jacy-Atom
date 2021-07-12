@@ -12,7 +12,7 @@
       '
     'tabLength': 4
     'softTabs': true
-    'preferredLineLength': 99
+    'preferredLineLength': 120
   'bracket-matcher':
     autocompleteCharacters: [
       '()'
