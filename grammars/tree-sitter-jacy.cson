@@ -48,6 +48,8 @@ scopes:
     '":"': 'keyword.operator.constraint'
     '"::"': 'keyword.operator.path'
     '"="': 'keyword.operator.assign'
+    'unary_expr > "*"': 'keyword.operator.dereference'
+    'unary_expr > "!"': 'keyword.operator.not'
 
     # punctuations
     '";"': 'punctuation.terminator.statement'
@@ -66,7 +68,7 @@ scopes:
     'bool_lit': 'constant.language.boolean'
     'int_lit': 'constant.numeric.decimal'
     'float_lit': 'constant.numeric.decimal'
-    'negative_literal > "-"' : 'constant.numeric.neg'
+    'neg_lit > "-"' : 'constant.numeric.neg'
 
     # Operators
     '"and"': 'keyword.control.and'
