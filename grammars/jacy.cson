@@ -30,6 +30,7 @@ patterns: [
     }
 
     {include: '#operators'}
+    {include: '#keywords'}
     {include: '#punctuation'}
     {include: '#sigils'}
     {include: '#modifiers'}
