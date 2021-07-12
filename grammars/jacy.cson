@@ -58,7 +58,7 @@ patterns: [
             {
                 comment: 'Reserved keywords'
                 name: 'invalid.illegal.jacy'
-                match: '\\b(try|catch|final|pure|async|await|do|infix)\\b'
+                match: '\\b(try|catch|final|pure|async|await|do|infix|where)\\b'
             }
         ]
     }
@@ -297,6 +297,7 @@ patterns: [
                     {include: '#sigils'}
                     {include: '#modifiers'}
                     {include: '#types'}
+                    {include: '#misc_operators'}
                     {
                         comment: 'Function parameters'
                         match: 'func'
