@@ -26,4 +26,3 @@ Anyway, some things are planned for future and it is appreciated to contribute t
 2. Add more snippets (at least one for each syntax-unit)
 3. Write some tests (mostly about `tree-sitter-jacy`)
 4. Maybe add some menu items, keymaps or styles?
-5. 
