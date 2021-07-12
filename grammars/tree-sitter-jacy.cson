@@ -48,8 +48,8 @@ scopes:
     '":"': 'keyword.operator.constraint'
     '"::"': 'keyword.operator.path'
     '"="': 'keyword.operator.assign'
-    'unary_expr > "*"': 'keyword.operator.dereference'
-    'unary_expr > "!"': 'keyword.operator.not'
+    'prefix_expr > "*"': 'keyword.operator.dereference'
+    'prefix_expr > "!"': 'keyword.operator.not'
 
     # punctuations
     '";"': 'punctuation.terminator.statement'
@@ -81,15 +81,26 @@ scopes:
     ref_type > "&"
     ''' : 'keyword.operator.reference'
 
+
     '''
-    binop_expr > "+",
-    binop_expr > "-",
-    binop_expr > "/",
-    binop_expr > "*",
-    binop_expr > "%",
-    binop_expr > "**",
-    binop_expr > "<<",
-    binop_expr > ">>",
+    assign_expr > "+=",
+    assign_expr > "-=",
+    compound_assignment_expr > "/=",
+    compound_assignment_expr > "*=",
+    compound_assignment_expr > "%=",
+    compound_assignment_expr > "<<=",
+    compound_assignment_expr > ">>=",
+    ''' : 'keyword.operator.math.assign'
+
+    '''
+    infix_expr > "+",
+    infix_expr > "-",
+    infix_expr > "/",
+    infix_expr > "*",
+    infix_expr > "%",
+    infix_expr > "**",
+    infix_expr > "<<",
+    infix_expr > ">>",
     ''' : 'keyword.operator.math'
 
     '''
@@ -101,3 +112,23 @@ scopes:
     assign_expr > "<<=",
     assign_expr > ">>=",
     ''' : 'keyword.operator.math.assign'
+
+    '''
+    infix_expr > "&",
+    infix_expr > "|",
+    infix_expr > "^",
+    ''' : 'keyword.operator.logic.bitwise'
+
+    '''
+    infix_expr > "<",
+    infix_expr > ">",
+    infix_expr > "==",
+    infix_expr > "<=",
+    infix_expr > ">=",
+    infix_expr > "!=",
+    ''' : 'keyword.operator.logic.bitwise'
+
+    '''
+    infix_expr > "and",
+    infix_expr > "or",
+    ''' : 'keyword.operator.logic.boolean'
