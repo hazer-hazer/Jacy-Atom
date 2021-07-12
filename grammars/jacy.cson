@@ -227,6 +227,22 @@ patterns: [
         }
     }
 
+    'ref_lifetime': {
+        comment: 'Reference lifetime (`&\'a expr`)'
+        match: '(&)(\'([\\p{Alpha}_][\\w]()))\\b'
+        captures: {
+            '1': {
+                name: 'keyword.operator.sigil.jacy'
+            }
+            '2': {
+                name: 'storage.modifier.lifetime.jacy'
+            }
+            '3': {
+                name: 'entity.name.lifetime.jacy'
+            }
+        }
+    }
+
     'literals': {
         patterns: [
             {include: '#bool_lit'}
