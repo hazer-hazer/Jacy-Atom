@@ -8,7 +8,7 @@
     "atom",
     "tree-sitter"
   ],
-  "repository": "https://github.com/hazer-hazer/Jacy-Atom",
+  "repository": "https://github.com/jacylang/Jacy-Atom",
   "license": "MIT",
   "engines": {
     "atom": "*",
